@@ -9,7 +9,7 @@ npm start
 ```
 2) Afterwards, just go to http://localhost:3000/
 
-## Tech Used
+## Technologies Used
 1) NodeJS: https://nodejs.org/en/
 2) Express: https://expressjs.com/
 3) Nodemon: https://nodemon.io/
