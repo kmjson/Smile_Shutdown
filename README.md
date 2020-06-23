@@ -1,5 +1,5 @@
 # Smile_Shutdown
-If you smile, your computer shuts down!
+If you smile, your computer shuts down! This is just a weird idea I had at 4 in the morning.
 
 ## To Run
 1) Setup the project
