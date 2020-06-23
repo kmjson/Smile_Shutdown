@@ -8,3 +8,6 @@ npm install
 npm start
 ```
 2) Afterwards, just go to http://localhost:3000/
+
+## Credit
+face-api.js: https://github.com/justadudewhohacks/face-api.js/
