@@ -1,4 +1,5 @@
 const video = document.getElementById('video');
+let go = true;
 
 Promise.all([
   faceapi.nets.tinyFaceDetector.loadFromUri('/models'),
@@ -22,6 +23,7 @@ function shutdownPost() {
   }).then((res) => {
     console.log('oh uh, computer shutting down.', res);
   });
+  go = false;
 }
 
 video.addEventListener('play', () => {
@@ -37,7 +39,7 @@ video.addEventListener('play', () => {
     const resizedDetections = faceapi.resizeResults(detections, displaySize);
     canvas.getContext('2d').clearRect(0, 0, canvas.width, canvas.height);
     // console.log(detections[0].expressions);
-    if (detections[0].expressions.happy > 0.9) {
+    if (detections[0].expressions.happy > 0.9 && go) {
       shutdownPost();
     }
     faceapi.draw.drawDetections(canvas, resizedDetections);
